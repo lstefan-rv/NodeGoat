@@ -14,7 +14,7 @@ jobs:
           command: |
             zip -r upload.zip .
             ls -l | grep upload.zip
-            java -jar /opt/veracode/api-wrapper.jar -vid $VID -vkey $VKEY -action uploadandscan -appname "NodeGoat-Demo" -createprofile false -version CircleCI-$CIRCLE_BUILD_NUM -filepath upload.zip
+            java -jar /opt/veracode/api-wrapper.jar -vid $VID -vkey $VKEY -action uploadandscan -appname "NodeGoat-Demo" -createprofile true -version CircleCI-$CIRCLE_BUILD_NUM -filepath upload.zip
 
 workflows:
   sample: # This is the name of the workflow, feel free to change it to better match your workflow.
